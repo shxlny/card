@@ -1,0 +1,203 @@
+:root {
+  --primary-color: #f8d64e;
+  --secondary-color: #1a1a2e;
+  --accent-color: #d62828;
+  --text-color: #333;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #fdfdc5;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.hero-card {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-header {
+  display: flex;
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--dark-color)
+  );
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+.hero-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  margin-right: 20px;
+  align-self: center;
+}
+
+.hero-title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-title h1 {
+  font-family: "Bangers", cursive;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.hero-company {
+  font-size: 0.9rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.hero-info {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.hero-about h3,
+.hero-abilities h3,
+.hero-contacts h3 {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-about h3 i {
+  color: var(--primary-color);
+}
+
+.hero-about p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.hero-details {
+  display: flex;
+  gap: 30px;
+}
+
+.hero-abilities,
+.hero-contacts {
+  flex: 1;
+}
+
+.hero-abilities ul,
+.hero-contacts ul {
+  list-style-type: none;
+}
+
+.hero-abilities li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #eee;
+  position: relative;
+  padding-left: 25px;
+}
+
+.hero-abilities li:before {
+  content: "★";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+.hero-contacts li {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-contacts li i {
+  width: 20px;
+  color: var(--accent-color);
+}
+
+.hero-footer {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-style: italic;
+  position: relative;
+}
+
+.hero-footer p {
+  margin-bottom: 10px;
+}
+
+.hero-logo {
+  font-family: "Bangers", cursive;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .hero-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero-details {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-title h2 {
+    font-size: 1.2rem;
+  }
+}
